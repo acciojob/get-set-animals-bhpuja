@@ -1,57 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animal, Cat, and Dog</title>
+  <title>Get Set Animals</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Animals: Cat and Dog</h1>
-  <p>Open the console to see the output.</p>
-
-  <script>
-    // Animal class
-    class Animal {
-      // Constructor accepting species
-      constructor(species) {
-        this._species = species;
-      }
-
-      // Getter for species
-      get species() {
-        return this._species;
-      }
-
-      // Method to log the sound the animal makes
-      makeSound() {
-        console.log(`The ${this.species} makes a sound`);
-      }
-    }
-
-    // Cat class extending Animal
-    class Cat extends Animal {
-      // Method to log "purr"
-      purr() {
-        console.log("purr");
-      }
-    }
-
-    // Dog class extending Animal
-    class Dog extends Animal {
-      // Method to log "woof"
-      bark() {
-        console.log("woof");
-      }
-    }
-
-    // Example usage
-    const myCat = new Cat("Siamese");
-    myCat.makeSound(); // Output: The Siamese makes a sound
-    myCat.purr(); // Output: purr
-
-    const myDog = new Dog("Golden Retriever");
-    myDog.makeSound(); // Output: The Golden Retriever makes a sound
-    myDog.bark(); // Output: woof
-  </script>
+  <div class="container">
+    <h1>Animal Sound Simulator</h1>
+    
+    <div class="form-group">
+      <h2>Create a Cat</h2>
+      <label for="cat-species">Species:</label>
+      <input type="text" id="cat-species" placeholder="Enter Cat Species">
+      <button id="create-cat">Create Cat</button>
+      <button id="cat-make-sound">Make Sound</button>
+      <button id="cat-purr">Purr</button>
+      <div id="cat-output" class="output"></div>
+    </div>
+    
+    <div class="form-group">
+      <h2>Create a Dog</h2>
+      <label for="dog-species">Species:</label>
+      <input type="text" id="dog-species" placeholder="Enter Dog Species">
+      <button id="create-dog">Create Dog</button>
+      <button id="dog-make-sound">Make Sound</button>
+      <button id="dog-bark">Bark</button>
+      <div id="dog-output" class="output"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
